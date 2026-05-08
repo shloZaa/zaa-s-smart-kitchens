@@ -63,6 +63,9 @@ function Home() {
               Custom kitchen remodeling, design, and installation built around your lifestyle.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
+              <Link to="/visualize" className="group inline-flex items-center gap-2 rounded-full bg-sage text-sage-foreground px-7 py-3.5 text-sm font-medium hover:bg-sage/90 transition-all shadow-xl ring-1 ring-background/20">
+                <Sparkles className="h-4 w-4" /> Visualize Your Kitchen with AI
+              </Link>
               <Link to="/estimate" className="group inline-flex items-center gap-2 rounded-full bg-background text-charcoal px-7 py-3.5 text-sm font-medium hover:bg-sage hover:text-sage-foreground transition-all">
                 Get Free Estimate <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -70,6 +73,9 @@ function Home() {
                 View Portfolio
               </Link>
             </div>
+            <p className="text-xs uppercase tracking-[0.18em] text-background/70 pt-1">
+              Upload a photo · describe your dream kitchen · see it brought to life
+            </p>
           </div>
         </div>
       </section>
@@ -237,6 +243,9 @@ function Home() {
             <p className="text-xs uppercase tracking-[0.2em] text-olive font-medium">Your dream kitchen starts here</p>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl mt-3 text-charcoal text-balance">Smarter kitchen remodeling.<br />Beautiful by design.</h2>
             <div className="mt-8 flex justify-center flex-wrap gap-3">
+              <Link to="/visualize" className="inline-flex items-center gap-2 rounded-full bg-sage text-sage-foreground px-7 py-3.5 text-sm font-medium hover:bg-sage/90 shadow-lg">
+                <Sparkles className="h-4 w-4" /> Try the AI Designer
+              </Link>
               <Link to="/estimate" className="rounded-full bg-primary text-primary-foreground px-7 py-3.5 text-sm font-medium hover:bg-primary/90">Get Free Estimate</Link>
               <Link to="/portfolio" className="rounded-full border border-border px-7 py-3.5 text-sm font-medium hover:bg-background">View Portfolio</Link>
             </div>

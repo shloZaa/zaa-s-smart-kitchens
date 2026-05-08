@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, ChefHat } from "lucide-react";
+import { Menu, X, ChefHat, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -12,6 +12,8 @@ const nav = [
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ] as const;
+
+const aiNav = { to: "/visualize", label: "AI Designer" } as const;
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,6 +54,13 @@ export function Header() {
               {n.label}
             </Link>
           ))}
+          <Link
+            to={aiNav.to}
+            className="inline-flex items-center gap-1.5 rounded-full bg-sage/15 text-sage px-3 py-1 text-sm font-medium border border-sage/30 hover:bg-sage hover:text-sage-foreground transition-colors"
+            activeProps={{ className: "bg-sage text-sage-foreground" }}
+          >
+            <Sparkles className="h-3.5 w-3.5" /> {aiNav.label}
+          </Link>
         </nav>
         <div className="flex items-center gap-2">
           <Link
@@ -82,6 +91,13 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
+            <Link
+              to={aiNav.to}
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-2 py-2 text-sage font-medium"
+            >
+              <Sparkles className="h-4 w-4" /> {aiNav.label}
+            </Link>
             <Link
               to="/estimate"
               onClick={() => setOpen(false)}
